@@ -1,0 +1,23 @@
+spec_version: "0.1.0"
+name: retail-inventory-agent
+version: 1.0.0
+description: Framework-independent agent for retail inventory analysis, stock health assessment, and replenishment recommendations.
+license: MIT
+skills:
+  - inventory-analysis
+  - replenishment-planning
+tools:
+  - analyze-inventory
+  - recommend-reorder
+  - summarize-stock
+runtime:
+  max_turns: 20
+  timeout: 30
+tags:
+  - retail
+  - inventory
+  - replenishment
+  - stock-management
+metadata:
+  domain: retail-inventory
+  implementation: python
