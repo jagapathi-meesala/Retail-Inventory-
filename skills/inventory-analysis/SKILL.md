@@ -1,3 +1,8 @@
+---
+name: inventory-analysis
+description: Classify current retail inventory health from SKU quantities and reorder points.
+---
+
 # Inventory Analysis
 
 ## Purpose

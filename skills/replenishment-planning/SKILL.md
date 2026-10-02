@@ -1,3 +1,8 @@
+---
+name: replenishment-planning
+description: Calculate deterministic retail replenishment quantities from current, reorder-point, and target-stock values.
+---
+
 # Replenishment Planning
 
 ## Purpose
