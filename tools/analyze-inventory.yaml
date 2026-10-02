@@ -1,0 +1,36 @@
+name: analyze-inventory
+description: Classify inventory health from current stock and reorder points.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    items:
+      type: array
+      items:
+        type: object
+        properties:
+          sku:
+            type: string
+          stock:
+            type: number
+            minimum: 0
+          reorder_point:
+            type: number
+            minimum: 0
+        required:
+          - sku
+          - stock
+          - reorder_point
+  required:
+    - items
+output_schema:
+  type: object
+  properties:
+    items:
+      type: array
+    counts:
+      type: object
+implementation:
+  type: script
+  path: analyze-inventory.py
+  runtime: python3

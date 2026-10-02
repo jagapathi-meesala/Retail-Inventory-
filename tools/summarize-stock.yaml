@@ -1,0 +1,38 @@
+name: summarize-stock
+description: Produce aggregate stock metrics for a supplied SKU list.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    items:
+      type: array
+      items:
+        type: object
+        properties:
+          sku:
+            type: string
+          stock:
+            type: number
+            minimum: 0
+        required:
+          - sku
+          - stock
+  required:
+    - items
+output_schema:
+  type: object
+  properties:
+    sku_count:
+      type: integer
+    total_units:
+      type: number
+    average_units:
+      type: number
+    zero_stock_skus:
+      type: array
+      items:
+        type: string
+implementation:
+  type: script
+  path: summarize-stock.py
+  runtime: python3

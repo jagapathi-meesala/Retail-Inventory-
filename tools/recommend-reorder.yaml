@@ -1,0 +1,32 @@
+name: recommend-reorder
+description: Recommend replenishment quantity from current, reorder-point, and target stock.
+version: 1.0.0
+input_schema:
+  type: object
+  properties:
+    current_stock:
+      type: number
+      minimum: 0
+    reorder_point:
+      type: number
+      minimum: 0
+    target_stock:
+      type: number
+      minimum: 0
+  required:
+    - current_stock
+    - reorder_point
+    - target_stock
+output_schema:
+  type: object
+  properties:
+    recommended_order_quantity:
+      type: number
+    action:
+      type: string
+    reason:
+      type: string
+implementation:
+  type: script
+  path: recommend-reorder.py
+  runtime: python3
